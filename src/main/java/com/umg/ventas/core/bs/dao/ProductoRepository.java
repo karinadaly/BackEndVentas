@@ -1,4 +1,7 @@
 package com.umg.ventas.core.bs.dao;
 
-public interface ProductoRepository {
+import com.umg.ventas.core.ies.bo.Producto;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface ProductoRepository extends PagingAndSortingRepository<Producto, Long> {
 }

@@ -1,4 +1,7 @@
 package com.umg.ventas.core.bs.dao;
 
-public interface DetallefacturaRepository {
+import com.umg.ventas.core.ies.bo.DetalleFactura;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface DetallefacturaRepository extends PagingAndSortingRepository<DetalleFactura, Long> {
 }

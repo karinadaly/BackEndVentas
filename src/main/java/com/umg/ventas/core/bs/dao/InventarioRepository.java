@@ -1,4 +1,7 @@
 package com.umg.ventas.core.bs.dao;
 
-public interface InventarioRepository {
+import com.umg.ventas.core.ies.bo.Inventario;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface InventarioRepository extends PagingAndSortingRepository<Inventario, Long> {
 }

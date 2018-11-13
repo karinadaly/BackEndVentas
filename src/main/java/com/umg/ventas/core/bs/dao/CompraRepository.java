@@ -1,4 +1,7 @@
 package com.umg.ventas.core.bs.dao;
 
-public interface CompraRepository {
+import com.umg.ventas.core.ies.bo.Compra;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface CompraRepository extends PagingAndSortingRepository<Compra, Long> {
 }
