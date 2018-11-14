@@ -6,11 +6,12 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Data
 @Entity
 @Table(name="detalle_factura")
-@EqualsAndHashCode(exclude = {"factura"})
+@EqualsAndHashCode(exclude = {"factura","producto"})
 public class DetalleFactura implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +27,9 @@ public class DetalleFactura implements Serializable {
   @JoinColumn(name = "codigo_factura",referencedColumnName = "codigo_factura")
   @JsonIgnore
   private Factura factura;
+  @ManyToOne
+  @JoinColumn(name = "codigo_producto",referencedColumnName = "codigo_producto")
+  @JsonIgnore
+  private Producto producto;
+
 }

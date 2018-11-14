@@ -16,7 +16,7 @@ public class Compra implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "numero_documento")
-  private Long codigoDocumento;
+  private Long numeroDocumento;
   @Column(name = "fecha")
   private Date fecha;
   @Column(name = "total_compra")

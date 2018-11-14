@@ -33,7 +33,7 @@ public class ProveedorController {
       return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
     Proveedor proveedor =proveedorRepository.findOne(id);
-    proveedor.setDescripcion(registro.getDescripcion());
+    proveedor.setNit(registro.getNit());
     proveedorRepository.save(proveedor);
     return new ResponseEntity<Proveedor>(proveedor,HttpStatus.OK);
   }

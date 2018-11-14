@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Data
 @Table(name = "proveedores")
@@ -14,7 +15,7 @@ public class Proveedor implements Serializable {
   @Column(name = "codigo_proveedor")
   private Long codigoProveedor;
   @Column(name = "nit")
-  private String descripcion;
+  private String nit;
   @Column(name = "razon_social")
   private String razonSocial;
   @Column(name = "paginaWeb")
