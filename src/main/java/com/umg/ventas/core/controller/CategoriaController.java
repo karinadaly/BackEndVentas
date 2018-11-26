@@ -13,10 +13,12 @@ public class CategoriaController {
   @Autowired
   private CategoriaRepository categoriaRepository;
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable<Categoria> getAll(){
     return categoriaRepository.findAll();
   }
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.POST)
   public Object save(@RequestBody(required = true) Categoria registro){
     return categoriaRepository.save(registro);

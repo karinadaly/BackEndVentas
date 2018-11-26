@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 public class FacturaController {
   @Autowired
   private FacturaRepository facturaRepository;
+
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable getAll(){
     return facturaRepository.findAll();

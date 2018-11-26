@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class InventarioController {
   @Autowired
   private InventarioRepository inventarioRepository;
+
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable getAll(){
     return inventarioRepository.findAll();

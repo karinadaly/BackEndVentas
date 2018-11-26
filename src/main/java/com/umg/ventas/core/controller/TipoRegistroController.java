@@ -11,11 +11,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/tipo-registro")
+@RequestMapping(value = "/api/v1/tiporegistro")
 public class TipoRegistroController {
   @Autowired
   private TipoRegistroRepository tipoRegistroRepository;
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable<TipoRegistro> getAll(){
     return tipoRegistroRepository.findAll();

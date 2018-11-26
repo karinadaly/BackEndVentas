@@ -1,5 +1,6 @@
 package com.umg.ventas.core.ies.bo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -38,11 +39,11 @@ public class Producto implements Serializable {
   @JoinColumn(name = "codigo_categoria",referencedColumnName = "codigo_categoria")
   private Categoria categoria;
   @OneToMany(mappedBy = "factura")
+  @JsonIgnore
   private Set<DetalleFactura> detalleFactura;
   @OneToMany(mappedBy = "compra")
+  @JsonIgnore
   private Set<DetalleCompra> detalleCompra;
-
-
 
 
 }

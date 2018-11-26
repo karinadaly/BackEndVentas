@@ -19,7 +19,7 @@ public class Proveedor implements Serializable {
   @Column(name = "razon_social")
   private String razonSocial;
   @Column(name = "paginaWeb")
-  private Character paginaWeb;
+  private String paginaWeb;
   @Column(name = "contacto_principal")
   private String contactoPrincipal;
 

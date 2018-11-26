@@ -16,10 +16,13 @@ public class ClienteController {
   @Autowired
   private ClienteRepository clienteRepository;
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable<Cliente> getAll(){
     return clienteRepository.findAll();
   }
+
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.POST)
   public Object save(@RequestBody(required = true) Cliente registro){
     return clienteRepository.save(registro);

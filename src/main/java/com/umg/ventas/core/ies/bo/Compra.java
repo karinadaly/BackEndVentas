@@ -23,7 +23,6 @@ public class Compra implements Serializable {
   private Double totalCompra;
   @Column(name = "nombre_usuario")
   private String nombreUsuario;
-
   @ManyToOne
   @JoinColumn(name = "codigo_proveedor",referencedColumnName = "codigo_proveedor")
   private Proveedor proveedor;

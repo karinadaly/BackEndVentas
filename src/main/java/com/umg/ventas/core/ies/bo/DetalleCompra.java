@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name="detalle_compras")
-@EqualsAndHashCode(exclude = {"compra"})
+@EqualsAndHashCode(exclude = {"compra", "producto"})
 public class DetalleCompra implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +26,8 @@ public class DetalleCompra implements Serializable {
   @JoinColumn(name = "numero_documento",referencedColumnName = "numero_documento")
   @JsonIgnore
   private Compra compra;
+  @ManyToOne
+  @JoinColumn(name= "codigo_producto",referencedColumnName = "codigo_producto")
+  private Producto producto;
+
 }

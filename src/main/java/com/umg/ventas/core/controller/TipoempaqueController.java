@@ -18,11 +18,13 @@ public class TipoempaqueController {
 @Autowired
 private TipoEmpaqueRepository tipoempaqueRepository;
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable<TipoEmpaque> getAll(){
     return tipoempaqueRepository.findAll();
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method= RequestMethod.POST)
   public Object save(@RequestBody(required = true) TipoEmpaque registro){
     return tipoempaqueRepository.save(registro);

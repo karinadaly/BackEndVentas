@@ -16,10 +16,13 @@ public class ProveedorController {
   @Autowired
   private ProveedorRepository proveedorRepository;
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.GET)
   public Iterable<Proveedor> getAll(){
     return proveedorRepository.findAll();
   }
+
+  @CrossOrigin(origins = "http://localhost:4200")
   @RequestMapping(method = RequestMethod.POST)
   public Object save(@RequestBody(required = true) Proveedor registro){
     return proveedorRepository.save(registro);

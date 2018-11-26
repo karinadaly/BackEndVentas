@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 public class ProductoController  {
     @Autowired
     private ProductoRepository productoRepository;
+
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.GET)
     public Iterable getAll(){
       return productoRepository.findAll();
